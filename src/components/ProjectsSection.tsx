@@ -6,6 +6,7 @@ import projectAts from "@/assets/project-ats.png";
 import projectTsr from "@/assets/project-tsr.png";
 import projectPerimas from "@/assets/project-perimas.png";
 import projectSmartechon from "@/assets/project-smartechon.png";
+import projectAkira from "@/assets/project-akira.jpeg";
 
 const projects = [
   { 
@@ -53,7 +54,7 @@ const projects = [
   {
     title: "Akira School ERP",
     category: "Education",
-    image: "/placeholder.svg",
+    image: projectAkira,
     link: "http://akiraschools.com/",
     description: "Comprehensive school management ERP for academics, admissions, and administration."
   },
