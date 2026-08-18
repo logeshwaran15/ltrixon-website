@@ -7,6 +7,8 @@ import projectTsr from "@/assets/project-tsr.png";
 import projectPerimas from "@/assets/project-perimas.png";
 import projectSmartechon from "@/assets/project-smartechon.png";
 import projectAkira from "@/assets/project-akira.jpeg";
+import projectImayaFarms from "@/assets/project-imayafarms.jpeg";
+import projectRoshJewels from "@/assets/project-roshjewels.jpeg";
 
 const projects = [
   { 
@@ -57,6 +59,20 @@ const projects = [
     image: projectAkira,
     link: "http://akiraschools.com/",
     description: "Comprehensive school management ERP for academics, admissions, and administration."
+  },
+  {
+    title: "Imaya Farms",
+    category: "Agriculture",
+    image: projectImayaFarms,
+    link: "https://imayafarms.com/",
+    description: "Farm-fresh produce and agri-business platform connecting growers with customers."
+  },
+  {
+    title: "Rosh Jewels",
+    category: "Jewelry & E-Commerce",
+    image: projectRoshJewels,
+    link: "https://roshjewels.com/",
+    description: "Elegant online jewelry storefront showcasing premium handcrafted collections."
   },
 ];
 
