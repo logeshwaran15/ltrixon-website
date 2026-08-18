@@ -43,12 +43,19 @@ const projects = [
     link: "https://www.thillaiconstruction.com",
     description: "A professional architectural and construction showcase website."
   },
-  { 
-    title: "Compact Recruit Suite", 
-    category: "Saas Platform", 
-    image: projectAts, 
+  {
+    title: "Compact Recruit Suite",
+    category: "Saas Platform",
+    image: projectAts,
     link: "#",
     description: "Streamlined applicant tracking and recruitment management system."
+  },
+  {
+    title: "Akira School ERP",
+    category: "Education",
+    image: "/placeholder.svg",
+    link: "http://akiraschools.com/",
+    description: "Comprehensive school management ERP for academics, admissions, and administration."
   },
 ];
 
