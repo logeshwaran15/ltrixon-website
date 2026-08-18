@@ -9,6 +9,7 @@ import projectSmartechon from "@/assets/project-smartechon.png";
 import projectAkira from "@/assets/project-akira.jpeg";
 import projectImayaFarms from "@/assets/project-imayafarms.jpeg";
 import projectRoshJewels from "@/assets/project-roshjewels.jpeg";
+import projectTrinitySystems from "@/assets/project-trinitysystems.png";
 
 const projects = [
   { 
@@ -73,6 +74,13 @@ const projects = [
     image: projectRoshJewels,
     link: "https://roshjewels.com/",
     description: "Elegant online jewelry storefront showcasing premium handcrafted collections."
+  },
+  {
+    title: "Trinity Systems",
+    category: "Corporate",
+    image: projectTrinitySystems,
+    link: "https://trinitysystems.co.in/next",
+    description: "Modern corporate website for Trinity Systems' technology and business solutions."
   },
 ];
 
