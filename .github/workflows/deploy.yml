@@ -1,0 +1,58 @@
+name: Deploy to MilesWeb
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build production bundle
+        run: npm run build
+
+      - name: Deploy frontend (dist/) to /ltrixon.com
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.MILESWEB_FTP_HOST }}
+          port: ${{ secrets.MILESWEB_FTP_PORT }}
+          username: ${{ secrets.MILESWEB_FTP_USERNAME }}
+          password: ${{ secrets.MILESWEB_FTP_PASSWORD }}
+          protocol: ftp
+          local-dir: ./dist/
+          server-dir: /ltrixon.com/
+          dangerous-clean-slate: false
+          exclude: |
+            **/backend/**
+            **/.env
+            **/.env.*
+            **/.git*
+            **/node_modules/**
+
+      - name: Deploy backend (PHP) to /ltrixon.com/backend
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.MILESWEB_FTP_HOST }}
+          port: ${{ secrets.MILESWEB_FTP_PORT }}
+          username: ${{ secrets.MILESWEB_FTP_USERNAME }}
+          password: ${{ secrets.MILESWEB_FTP_PASSWORD }}
+          protocol: ftp
+          local-dir: ./backend/
+          server-dir: /ltrixon.com/backend/
+          dangerous-clean-slate: false
+          exclude: |
+            **/.env
+            **/.env.*
+            **/.git*
