@@ -23,6 +23,20 @@ jobs:
       - name: Build production bundle
         run: npm run build
 
+      - name: Verify required secrets are set
+        run: |
+          missing=""
+          [ -z "${{ secrets.MILESWEB_FTP_HOST }}" ] && missing="$missing MILESWEB_FTP_HOST"
+          [ -z "${{ secrets.MILESWEB_FTP_PORT }}" ] && missing="$missing MILESWEB_FTP_PORT"
+          [ -z "${{ secrets.MILESWEB_FTP_USERNAME }}" ] && missing="$missing MILESWEB_FTP_USERNAME"
+          [ -z "${{ secrets.MILESWEB_FTP_PASSWORD }}" ] && missing="$missing MILESWEB_FTP_PASSWORD"
+          if [ -n "$missing" ]; then
+            echo "::error::Missing or empty repository secret(s):$missing"
+            echo "Go to Settings > Secrets and variables > Actions (repository secrets, NOT environment secrets) and (re)add them."
+            exit 1
+          fi
+          echo "All required secrets are present."
+
       - name: Deploy frontend (dist/) to /ltrixon.com
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
