@@ -44,7 +44,7 @@ jobs:
           port: ${{ secrets.MILESWEB_FTP_PORT }}
           username: ${{ secrets.MILESWEB_FTP_USERNAME }}
           password: ${{ secrets.MILESWEB_FTP_PASSWORD }}
-          protocol: ftp
+          protocol: ftps
           local-dir: ./dist/
           server-dir: /ltrixon.com/
           dangerous-clean-slate: false
@@ -62,7 +62,7 @@ jobs:
           port: ${{ secrets.MILESWEB_FTP_PORT }}
           username: ${{ secrets.MILESWEB_FTP_USERNAME }}
           password: ${{ secrets.MILESWEB_FTP_PASSWORD }}
-          protocol: ftp
+          protocol: ftps
           local-dir: ./backend/
           server-dir: /ltrixon.com/backend/
           dangerous-clean-slate: false
