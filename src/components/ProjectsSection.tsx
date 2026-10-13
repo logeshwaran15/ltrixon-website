@@ -10,6 +10,7 @@ import projectAkira from "@/assets/project-akira.jpeg";
 import projectImayaFarms from "@/assets/project-imayafarms.jpeg";
 import projectRoshJewels from "@/assets/project-roshjewels.jpeg";
 import projectTrinitySystems from "@/assets/project-trinitysystems.png";
+import projectNethras from "@/assets/projectNethras.png";
 
 const projects = [
   { 
@@ -81,6 +82,13 @@ const projects = [
     image: projectTrinitySystems,
     link: "https://trinitysystems.co.in/next",
     description: "Modern corporate website for Trinity Systems' technology and business solutions."
+  },
+  {
+    title: "Nethra's",
+    category: "E-Commerce",
+    image: projectNethras,
+    link: "https://nethras.in/",
+    description: "Online store for premium mehndi stencils, hair clips and invisible chains."
   },
 ];
 
