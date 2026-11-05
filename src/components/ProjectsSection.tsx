@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import projectPowerpack from "@/assets/project-powerpack.png";
 import projectThillai from "@/assets/project-thillai.png";
-import projectAts from "@/assets/project-ats.png";
+import projectYadhav from "@/assets/project-yadhavmehandi.png";
 import projectTsr from "@/assets/project-tsr.png";
 import projectPerimas from "@/assets/project-perimas.png";
 import projectSmartechon from "@/assets/project-smartechon.png";
@@ -49,11 +49,11 @@ const projects = [
     description: "A professional architectural and construction showcase website."
   },
   {
-    title: "Compact Recruit Suite",
-    category: "Saas Platform",
-    image: projectAts,
-    link: "#",
-    description: "Streamlined applicant tracking and recruitment management system."
+    title: "Yadhav Mehandi",
+    category: "E-Commerce",
+    image: projectYadhav,
+    link: "https://yadhavmehandi.com/",
+    description: "Premium mehndi stencils for bridal, Arabic, mandala and kids designs with Pan India delivery."
   },
   {
     title: "Akira School ERP",
